@@ -6,11 +6,11 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="deno.unstable" />
 
-import { Deno } from "@supabase/functions-js/edge-runtime.d.ts"
+import "@supabase/functions-js/edge-runtime.d.ts"
 
 console.log("Hello from Functions!")
 
-Deno.serve(async (req: Request) => {
+Deno.serve(async (req) => {
   const { name } = await req.json()
   const data = {
     message: `Hello ${name}!`,
